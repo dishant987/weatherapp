@@ -141,8 +141,8 @@ function App() {
                 exit={{ opacity: 0, y: 30 }}
                 transition={{ duration: 0.5 }}
               >
-                {/* Current weather section */}
-                <div className="font-bold text-2xl text-center mb-2 text-gray-900 dark:text-gray-100">{currentData.name}</div>
+                {/* Current weather section */ console.log(currentData)}
+                <div className="font-bold text-2xl text-center mb-2 text-gray-900 dark:text-gray-100">{currentData.name},{currentData.sys.country}{ }</div>
                 <div className="text-md text-gray-600 dark:text-gray-400 text-center mb-4">
                   {new Date().toLocaleDateString('en-US', {
                     weekday: 'long',
@@ -172,7 +172,7 @@ function App() {
                       <div className="font-medium text-5xl mb-2 text-gray-900 dark:text-gray-100">{Math.round(currentData.main.temp)}°C</div>
                       <div className="text-md text-gray-600 dark:text-gray-400 mb-2">{currentData.weather[0].description}</div>
                       <div className="text-sm text-gray-500 dark:text-gray-300">
-                        High: {Math.round(currentData.main.temp_max)}°C | Low: {Math.round(currentData.main.temp_min)}°C
+                        High: {Math.round(currentData.main.temp_max)}°C  | Low: {Math.round(currentData.main.temp_min)}°C
                       </div>
                     </div>
                   </div>
