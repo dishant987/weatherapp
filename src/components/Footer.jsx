@@ -8,7 +8,7 @@ const Footer = () => {
             } transition-colors duration-300`}>
             <div className="container mx-auto px-4">
                 <p>
-                    © {new Date().getFullYear()} Weather App Built with ❤️ by <a href="https://www.linkedin.com/in/dishant-tank-25a421224/">Dishant</a>
+                    © {new Date().getFullYear()} Weather App Built with ❤️ by <a href="https://www.linkedin.com/in/dishant-tank-25a421224/" className=' font-bold'>Dishant</a>
                 </p>
 
             </div>

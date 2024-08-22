@@ -52,8 +52,8 @@ const SearchInput = ({ onSelectCity }) => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={selectedCity || "Enter city name..."}
-                    className="p-2 border rounded w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300
-                               dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-700 text-sm md:text-base"
+                    className="p-2 border rounded border-gray-400 w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300
+                               dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 placeholder-gray-700 text-sm md:text-base"
                 />
                 {loading && (
                     <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">

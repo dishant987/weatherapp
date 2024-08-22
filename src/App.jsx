@@ -152,13 +152,13 @@ function App() {
                   })}
                 </div>
                 <motion.div
-                  className="flex-col md:flex md:flex-row items-center justify-between text-center mb-4"
+                  className="flex-col md:flex md:flex-row items-center  text-center mb-4"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
                 >
                   {/* Weather Icon */}
-                  <div className="flex md:flex md:flex-row  flex-auto">
+                  <div className="flex md:flex md:flex-row  justify-center items-center  flex-grow">
                     <motion.img
                       src={`http://openweathermap.org/img/wn/${currentData.weather[0].icon}@4x.png`}
                       alt={currentData.weather[0].description}
