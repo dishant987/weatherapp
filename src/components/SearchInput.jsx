@@ -14,7 +14,7 @@ const SearchInput = ({ onSelectCity }) => {
             const fetchSuggestions = async () => {
                 try {
                     const response = await axios.get(
-                        `http://api.openweathermap.org/geo/1.0/direct`,
+                        `https://api.openweathermap.org/geo/1.0/direct`,
                         {
                             params: {
                                 q: input,
