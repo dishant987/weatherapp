@@ -7,7 +7,6 @@ const SearchInput = ({ onSelectCity }) => {
     const [suggestions, setSuggestions] = useState([]);
     const [loading, setLoading] = useState(false);
     const [selectedCity, setSelectedCity] = useState('');
-
     useEffect(() => {
         if (input.length > 0) {
             setLoading(true);
@@ -46,7 +45,7 @@ const SearchInput = ({ onSelectCity }) => {
     };
 
     return (
-        <div className="relative w-full">
+        <div className="relative w-full max-w-md mx-auto p-4 md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             <div className="relative">
                 <input
                     type="text"
@@ -54,7 +53,7 @@ const SearchInput = ({ onSelectCity }) => {
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={selectedCity || "Enter city name..."}
                     className="p-2 border rounded w-full pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300
-                               dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-700"
+                               dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-700 text-sm md:text-base"
                 />
                 {loading && (
                     <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
@@ -67,7 +66,7 @@ const SearchInput = ({ onSelectCity }) => {
             <AnimatePresence>
                 {loading && (
                     <motion.div
-                        className="absolute z-10 bg-white w-full  dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded mt-1 p-2 text-sm text-gray-500 dark:text-gray-300"
+                        className="absolute z-10 bg-white w-full dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded mt-1 p-2 text-sm text-gray-500 dark:text-gray-300"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -78,7 +77,7 @@ const SearchInput = ({ onSelectCity }) => {
                 )}
                 {!loading && suggestions.length > 0 && (
                     <motion.ul
-                        className="absolute z-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded mt-1 w-full text-left shadow-lg max-h-60 overflow-y-auto"
+                        className="absolute z-10 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded mt-1 w-full text-left shadow-lg max-h-60 overflow-y-auto text-sm md:text-base"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
