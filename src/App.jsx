@@ -180,18 +180,18 @@ function App() {
 
 
                   {/* Additional Information */}
-                  <div className="md:flex md:flex-col md:gap-2 flex gap-4 mt-6 md:mt-0 items-center justify-center  md:items-start text-gray-900 dark:text-gray-100">
+                  <div className="md:flex md:flex-col md:gap-2 flex gap-3 mt-6 md:mt-0 items-center justify-center  md:items-start text-gray-900 dark:text-gray-100">
                     <div className="flex items-center">
-                      <div className="font-medium text-sm mr-2">Wind:</div>
-                      <div>{currentData.wind.speed} m/s</div>
+                      <div className="font-medium text-xs md:text-sm mr-2">Wind:</div>
+                      <div className='md:text-sm  text-xs'>{currentData.wind.speed} m/s</div>
                     </div>
                     <div className="flex items-center">
-                      <div className="font-medium text-sm mr-2">Humidity:</div>
-                      <div>{currentData.main.humidity}%</div>
+                      <div className="font-medium md:text-sm  text-xs mr-2">Humidity:</div>
+                      <div className='md:text-sm  text-xs'>{currentData.main.humidity}%</div>
                     </div>
                     <div className="flex items-center">
-                      <div className="font-medium text-sm mr-2">Visibility:</div>
-                      <div>{currentData.visibility / 1000} km</div>
+                      <div className="font-medium text-xs md:text-sm  mr-2">Visibility:</div>
+                      <div className='md:text-sm text-xs'>{currentData.visibility / 1000} km</div>
                     </div>
                   </div>
                 </motion.div>
@@ -211,17 +211,17 @@ function App() {
                           transition={{ duration: 0.3 }}
                         >
                           <button
-                            className="flex items-center justify-between w-full bg-white dark:bg-gray-900 rounded-lg shadow-lg duration-300 hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+                            className="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-1 md:p-0 rounded-lg shadow-lg duration-300 hover:bg-blue-100 dark:hover:bg-blue-700 transition"
                             onClick={() => setSelectedDay(selectedDay === index ? null : index)}
                           >
-                            <div className="font-medium md:text-lg text-sm flex-1 text-center text-gray-900 dark:text-gray-100">{forecast.weekday}</div>
+                            <div className="font-medium md:text-lg text-xs flex-1 text-center text-gray-900 dark:text-gray-100">{forecast.weekday}</div>
                             <img
                               src={`http://openweathermap.org/img/wn/${forecast.icon}@2x.png`}
                               alt={forecast.description}
                               className="md:w-20 md:h-20 w-14 h-14"
                             />
-                            <div className="flex-1 text-center text-gray-700 dark:text-gray-300 font-medium md:text-lg text-sm">{forecast.description}</div>
-                            <div className="flex-1 text-center text-gray-600 dark:text-gray-400">{Math.round(forecast.maxTemp)}°C/{Math.round(forecast.minTemp)}°C</div>
+                            <div className="flex-1 text-center text-gray-700 dark:text-gray-300 font-medium md:text-lg text-xs">{forecast.description}</div>
+                            <div className="flex-1 text-center text-gray-600 dark:text-gray-400 font-medium md:text-lg text-xs">{Math.round(forecast.maxTemp)}°C/{Math.round(forecast.minTemp)}°C</div>
                           </button>
                           {selectedDay === index && (
                             <motion.div
